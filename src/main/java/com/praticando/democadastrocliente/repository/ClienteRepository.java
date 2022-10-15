@@ -42,6 +42,7 @@ public class ClienteRepository {
      * @return Retorna o cliente que foi adicionado na lista.
      */
     public Cliente adicionar(Cliente cliente){
+        
         ultimoId++;
         cliente.setId(ultimoId);
         clientes.add(cliente);
