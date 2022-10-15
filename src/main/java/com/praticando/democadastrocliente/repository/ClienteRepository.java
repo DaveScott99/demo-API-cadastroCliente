@@ -1,12 +1,15 @@
-package main.java.com.praticando.democadastrocliente.repository;
+package com.praticando.democadastrocliente.repository;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Optional;
 
-import main.java.com.praticando.democadastrocliente.model.Cliente;
+import org.springframework.stereotype.Repository;
 
+import com.praticando.democadastrocliente.model.Cliente;
+
+@Repository
 public class ClienteRepository {
     
     private List<Cliente> clientes = new ArrayList<>();
@@ -29,7 +32,7 @@ public class ClienteRepository {
     public Optional<Cliente> obterPorId(Integer id){
         return clientes
                 .stream()
-                .filter(cliente -> cliente.getId == id)
+                .filter(cliente -> cliente.getId() == id)
                 .findFirst(); 
     }
 

@@ -1,4 +1,4 @@
-package main.java.com.praticando.democadastrocliente.model;
+package com.praticando.democadastrocliente.model;
 
 public class Cliente {
     
